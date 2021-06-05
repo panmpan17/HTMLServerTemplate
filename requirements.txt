@@ -1,0 +1,3 @@
+sqlalchemy==1.4.17
+cherrypy==18.6.0
+jinja2==3.0.1
