@@ -64,7 +64,7 @@ class ResetViewHandler:
     _cp_config = {
         "tools.json_out.on": True,
         "tools.json_in.on": True,
-        # "tools.dbtool.on": True,
+        "tools.database.on": True,
         # "tools.keytool.on": True,
         "tools.encode.on": True,
     }
