@@ -79,3 +79,10 @@ class MainRestViewHandler(ResetViewHandler):
     def index(self, method, args, data):
         print(method, args, data)
         return {"msg": "You in the passage of the 'REST'"}
+
+    @cherrypy.expose
+    @jsonlize_response
+    def post(self, method, args, data):
+        if method == POST:
+            print(data)
+            return {}

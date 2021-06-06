@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+{% extends "base.html" %}
 
-    <script src="/static/javascript/staticFileLoader.js"></script>
-</head>
-<body>
-    <script>
-        AddAutoRenewStaticFiles([
-            "/static/css/index.css",
-        ]);
-    </script>
-</body>
-</html>
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<h1>Index</h1>
+
+<button onclick="OpenPopup('test-popup');">Open test popup</button>
+{% endblock %}
+
+{% block floatcontent %}
+<div id="test-popup" class="popup-frame">
+    <h2>This is Popup window</h2>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+    AddAutoRenewStaticFiles([
+        "/static/css/index.css",
+    ]);
+</script>
+{% endblock %}

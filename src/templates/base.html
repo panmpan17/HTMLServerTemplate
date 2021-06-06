@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/css/popup.css">
+
+    {% block css %}{% endblock %}
+
+    <script src="/static/javascript/staticFileLoader.js"></script>
+    <script src="/static/javascript/basic.js"></script>
+    <script src="/static/javascript/popup.js"></script>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+    <div id="backdrop-template" class="backdrop" onclick="BackdropCallback(this);"></div>
+    {% block floatcontent %}{% endblock %}
+    {% block javascript %}{% endblock %}
+</body>
+
+</html>
